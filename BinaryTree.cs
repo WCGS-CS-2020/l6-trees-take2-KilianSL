@@ -19,7 +19,7 @@ namespace BinarySearchTree
 
         public bool IsLeaf() //returns true if node has no children
         {
-            if (Left==null & Right==null)
+            if (Left==null && Right==null)
             {
                 return true;
             }
@@ -42,7 +42,7 @@ namespace BinarySearchTree
             {
                 var current_node = Root;
                 var n = numbers[i];
-                while ((current_node.Left != null & n <= current_node.Data) | (current_node.Right != null & n > current_node.Data))
+                while ((current_node.Left != null && n <= current_node.Data) || (current_node.Right != null && n > current_node.Data))
                 {
                     if (n <= current_node.Data)
                     {
@@ -67,7 +67,7 @@ namespace BinarySearchTree
         public bool SearchTree(double n)
         {
             var current_node = Root;
-            while (current_node.Data != n & current_node != null)
+            while (current_node.Data != n && current_node != null)
             {
                 if (current_node.Data > n)
                 {
